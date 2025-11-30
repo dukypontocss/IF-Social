@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF-Social - Feed</title>
+    <link rel="stylesheet" href="send.css">
+    <link rel="stylesheet" href="dark-mode.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">IF-Social</div>
+        <div class="nav" id="mainNav">
+            <button class="nav-btn active" onclick="window.location.href='feed.html'">Feed</button>
+            <button class="nav-btn" onclick="sair()">Sair</button>
+        </div>
+        <div style="display: flex; align-items: center;">
+            <button class="dark-mode-toggle" onclick="alternarTema()" title="Toggle Dark Mode">🌙</button>
+            <span class="user-info" id="userInfo"></span>
+        </div>
+    </div>
+
+    <div id="feedScreen">
+        <div class="container">
+            <div class="post-box">
+                <textarea id="novoPost" placeholder="O que está acontecendo?" rows="3"></textarea>
+                <button onclick="criarPost()">Postar</button>
+            </div>
+            <div id="postsFeed"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            iniciarDarkMode();
+            verificarLoginERedireccionar('feed.html');
+            if (usuarioAtual) {
+                document.getElementById('userInfo').textContent = `@${usuarioAtual.username}`;
+                iniciarPollingFeed();
+            }
+            
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    pararPollingFeed();
+                } else {
+                    iniciarPollingFeed();
+                }
+            });
+            
+            window.addEventListener('beforeunload', () => {
+                pararPollingFeed();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* Dark Mode Stylesheet */
+
+/* Modo escuro no body */
+body.dark-mode {
+    background: #121212 !important;
+    color: #E0E0E0 !important;
+}
+
+/* Dark Mode - Header */
+body.dark-mode .header {
+    background: #1E1E1E !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .logo {
+    color: #1DB954 !important;
+}
+
+body.dark-mode .user-info {
+    color: #B0B0B0 !important;
+}
+
+body.dark-mode .nav-btn {
+    color: #B0B0B0 !important;
+}
+
+body.dark-mode .nav-btn:hover {
+    color: #1DB954 !important;
+}
+
+body.dark-mode .nav-btn.active {
+    background: #1DB954 !important;
+    color: white !important;
+    box-shadow: 0 4px 6px rgba(29, 185, 84, 0.3) !important;
+}
+
+/* Dark Mode - Formulários */
+body.dark-mode .auth-container {
+    background: #1E1E1E !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.dark-mode .auth-title {
+    color: #1DB954 !important;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="password"],
+body.dark-mode textarea {
+    background: #2D2D2D !important;
+    border: 1px solid #404040 !important;
+    color: #E0E0E0 !important;
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus {
+    border-color: #1DB954 !important;
+    box-shadow: 0 0 0 2px rgba(29, 185, 84, 0.2) !important;
+}
+
+body.dark-mode button:not(.dark-mode-toggle) {
+    background: #1DB954 !important;
+    color: white !important;
+}
+
+body.dark-mode button:not(.dark-mode-toggle):hover {
+    background: #189845 !important;
+    box-shadow: 0 4px 8px rgba(29, 185, 84, 0.4) !important;
+}
+
+body.dark-mode .link-btn {
+    color: #1DB954 !important;
+    background: none !important;
+}
+
+body.dark-mode .link-btn:hover {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+/* Dark Mode - Posts */
+body.dark-mode .post-box {
+    background: #1E1E1E !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .post {
+    background: #1E1E1E !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .post:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.dark-mode .post-author {
+    color: #1DB954 !important;
+}
+
+body.dark-mode .post-time {
+    color: #808080 !important;
+}
+
+body.dark-mode .post-content {
+    color: #D0D0D0 !important;
+}
+
+body.dark-mode .hype-btn {
+    color: #808080 !important;
+}
+
+body.dark-mode .hype-btn:hover {
+    color: #EE2E31 !important;
+}
+
+body.dark-mode .hype-btn.hyped {
+    color: #EE2E31 !important;
+}
+
+/* Dark Mode - Notificação */
+body.dark-mode .notification {
+    background: #1DB954 !important;
+    color: white !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Dark Mode - Toggle Button (pequeno e discreto) */
+.dark-mode-toggle {
+    background: none !important;
+    border: none !important;
+    color: #666666 !important;
+    cursor: pointer;
+    font-size: 14px !important;
+    padding: 2px 8px !important;
+    margin-left: 10px;
+    transition: color 0.2s;
+    width: auto !important;
+}
+
+.dark-mode-toggle:hover {
+    color: #1DB954 !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+body.dark-mode .dark-mode-toggle {
+    color: #B0B0B0 !important;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+    color: #1DB954 !important;
+}

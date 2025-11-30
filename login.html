@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF-Social - Login</title>
+    <link rel="stylesheet" href="send.css">
+    <link rel="stylesheet" href="dark-mode.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">IF-Social</div>
+        <button class="dark-mode-toggle" onclick="alternarTema()" title="Toggle Dark Mode">🌙</button>
+    </div>
+
+    <div id="telaAutenticacao">
+        <div class="auth-container">
+            <h2 class="auth-title">Bem-vindo ao IF-Social</h2>
+            <div id="formularioLogin">
+                <input type="text" id="usuarioLogin" placeholder="Usuário">
+                <input type="password" id="senhaLogin" placeholder="Senha">
+                <button onclick="entrar()">Entrar</button>
+                <button class="link-btn" onclick="window.location.href='register.html'">Criar conta</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            iniciarDarkMode();
+        });
+    </script>
+</body>
+</html>
