@@ -32,6 +32,13 @@ app.use(bodyParser.json());
 // Isso faz o servidor também funcionar como servidor web
 app.use(express.static(path.join(__dirname)));
 
+// ROTA: Raiz do servidor - Envia login.html
+// Quando acessa http://localhost:8080, mostra login.html
+app.get('/', (req, res) => {
+    console.log('Rota / foi acessada!');
+    res.sendFile(path.join(__dirname, 'login.html'));
+});
+
 // ========================================
 // CRIAÇÃO DO BANCO DE DADOS
 // ========================================
@@ -73,11 +80,6 @@ db.serialize(() => {
 // ========================================
 // ROTAS DA API (endpoints)
 // ========================================
-
-app.get('/', (req, res) => {
-    res.redirect('/login.html');
-});
-
 
 // ROTA 1: Health Check
 // Verifica se o servidor está online
