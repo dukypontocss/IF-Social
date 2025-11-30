@@ -74,6 +74,11 @@ db.serialize(() => {
 // ROTAS DA API (endpoints)
 // ========================================
 
+app.get('/', (req, res) => {
+    res.redirect('/login.html');
+});
+
+
 // ROTA 1: Health Check
 // Verifica se o servidor está online
 app.get('/health', (req, res) => res.json({ ok: true, timestamp: Date.now() }));
