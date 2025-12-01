@@ -93,6 +93,24 @@ function verificarLoginERedireccionar(paginaAtual) {
 // AUTENTICAÇÃO - Criação de conta e login
 // ========================================
 
+// Função para validar a força da senha
+// Precisa de: letra maiúscula e caractere especial
+function validarSenha(senha) {
+    // Verifica se tem letra maiúscula
+    const temMaiuscula = /[A-Z]/.test(senha);
+    // Verifica se tem caractere especial (!@#$%^&*...)
+    const temEspecial = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(senha);
+    // Verifica tamanho mínimo (6 caracteres)
+    const temTamanho = senha.length >= 5;
+    
+    return {
+        valida: temMaiuscula && temEspecial && temTamanho,
+        temMaiuscula,
+        temEspecial,
+        temTamanho
+    };
+}
+
 // Quando clica em "Criar Conta"
 async function criarConta() {
     // Pega o que foi digitado nos inputs
@@ -102,6 +120,17 @@ async function criarConta() {
     // Valida se digitou algo
     if (!usuario || !senha) {
         exibirNotificacao('Preencha todos os campos!');
+        return;
+    }
+
+    // Valida a força da senha
+    const validacao = validarSenha(senha);
+    if (!validacao.valida) {
+        let mensagem = 'A senha deve ter:\n';
+        if (!validacao.temTamanho) mensagem += '- Mínimo 6 caracteres\n';
+        if (!validacao.temMaiuscula) mensagem += '- Uma letra MAIÚSCULA\n';
+        if (!validacao.temEspecial) mensagem += '- Um caractere especial (!@#$%^&*...)';
+        exibirNotificacao(mensagem);
         return;
     }
 
