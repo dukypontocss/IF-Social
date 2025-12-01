@@ -46,6 +46,7 @@ body.dark-mode .auth-title {
 
 body.dark-mode input[type="text"],
 body.dark-mode input[type="password"],
+body.dark-mode input[type="email"],
 body.dark-mode textarea {
     background: #2D2D2D !important;
     border: 1px solid #404040 !important;
@@ -54,6 +55,11 @@ body.dark-mode textarea {
 
 body.dark-mode input:focus,
 body.dark-mode textarea:focus {
+    border-color: #1DB954 !important;
+    box-shadow: 0 0 0 2px rgba(29, 185, 84, 0.2) !important;
+}
+
+body.dark-mode input[type="email"]:focus {
     border-color: #1DB954 !important;
     box-shadow: 0 0 0 2px rgba(29, 185, 84, 0.2) !important;
 }

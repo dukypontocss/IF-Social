@@ -19,8 +19,12 @@
             <div id="formularioLogin">
                 <input type="text" id="usuarioLogin" placeholder="Usuário">
                 <input type="password" id="senhaLogin" placeholder="Senha">
-                <button onclick="entrar()">Entrar</button>
-                <button class="link-btn" onclick="window.location.href='register.html'">Criar conta</button>
+                <input type="email" id="gmailLogin" placeholder="Gmail">
+                <div class="button-group">
+                    <button onclick="entrar()">Entrar</button>
+                    <button class="link-btn" onclick="window.location.href='register.html'">Criar conta</button>
+                    <button class="limpar-btn" onclick="limparCamposLogin()">Limpar</button>
+                </div>
             </div>
         </div>
     </div>
@@ -30,6 +34,12 @@
         document.addEventListener('DOMContentLoaded', function() {
             iniciarDarkMode();
         });
+    </script>
+    
+    <!-- VLibras - Tradução para Libras -->
+    <script src="https://vlibras.gov.br/app/vlibras.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 </body>
 </html>

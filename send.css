@@ -103,6 +103,16 @@ textarea {
     transition: border-color 0.2s;
 }
 
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
 input:focus, textarea:focus {
     border-color: #1DB954;
     outline: none;
@@ -141,6 +151,20 @@ button:hover {
     text-decoration: underline;
     background: none;
     box-shadow: none;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.limpar-btn {
+    background: #888888;
+}
+
+.limpar-btn:hover {
+    background: #666666;
 }
 
 .hidden {

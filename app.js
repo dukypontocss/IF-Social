@@ -230,6 +230,22 @@ function sair() {
     window.location.href = 'login.html';
 }
 
+// Limpa os campos do formulário de login
+function limparCamposLogin() {
+    document.getElementById('usuarioLogin').value = '';
+    document.getElementById('senhaLogin').value = '';
+    document.getElementById('gmailLogin').value = '';
+    console.log('Campos de login limpos');
+}
+
+// Limpa os campos do formulário de cadastro
+function limparCamposCadastro() {
+    document.getElementById('usuarioCadastro').value = '';
+    document.getElementById('senhaCadastro').value = '';
+    document.getElementById('gmailCadastro').value = '';
+    console.log('Campos de cadastro limpos');
+}
+
 // ========================================
 // FEED - Posts e tudo relacionado
 // ========================================
