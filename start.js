@@ -14,9 +14,6 @@ app.use(bodyParser.json());
 // Serve arquivos estáticos (HTML, CSS, JS)
 app.use(express.static(__dirname));
 
-// ... resto do código do server.js ...
-// (copie todo o conteúdo do server_complete acima)
-
 const PORT = 8080;
 app.listen(PORT, () => {
     console.log(`🚀 Servidor completo rodando em http://localhost:${PORT}`);
